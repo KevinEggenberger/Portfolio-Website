@@ -1,0 +1,106 @@
+header{
+    padding: 50px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    flex-wrap: wrap;
+}
+.header_text{
+    width: 850px;
+    margin-bottom: 50px;
+}
+#gradient-h1{
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: animate 10s linear infinite;
+    -webkit-text-stroke: 2px white;
+}
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+.circle{
+    height: 600px;
+    width: 600px;
+
+    max-height: 80vw;
+    max-width: 80vw;
+
+    overflow: hidden;
+    border-radius: 50%;
+    border: 20px solid var(--main-brand-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle img{
+    width: 110%;
+}
+nav{
+    margin-bottom: 100px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav a{
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    position: relative;
+    padding: 3px;
+}
+nav a:hover{
+    color: var(--text-color);
+}
+nav a::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: var(--main-brand-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 150ms ease-in-out;
+}
+nav a:hover::after{
+    width: 100%;
+}
+#toggle_button{
+    display: none;
+}
+label[for="toggle_button"]{
+    display: none;
+}
+label[for="toggle_button"]{
+    font-size: 40px;
+}
+@media(max-width: 800px){
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: var(--secondary-color);
+        padding: 15px;
+        border-radius: 0 0 25px 0;
+    }
+    nav ul{
+        display: none;
+        flex-direction: column;
+    }
+    #toggle_button:checked ~ ul{
+        display: flex;
+    }
+    label[for="toggle_button"]{
+        display: block;
+    }
+}

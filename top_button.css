@@ -1,0 +1,13 @@
+#backToTopBtn {
+    font-family: 'Poppins', sans-serif;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--main-brand-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}

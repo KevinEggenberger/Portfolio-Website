@@ -1,0 +1,81 @@
+#services_section{
+    padding: 70px 0;
+    background-color: var(--primary-color);
+}
+#services_section h2{
+    font-size: 50px;
+    text-align: center;
+}
+.flex_container{
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+.card{
+    height: 400px;
+    width: 350px;
+    max-width: calc(90% - 40px);
+    background-color: var(--secondary-color);
+    border-radius: 4rem;
+    padding: 60px 20px;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    position: relative; 
+}
+.card *{
+    text-align: center;
+}
+#animated-border1::before, #animated-border2::before, #animated-border3::before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    height: calc(100% + 24px);
+    width: calc(100% + 24px);
+    background-color: red;
+    z-index: -1; 
+    opacity: 0.5;
+    transition: 0.3s;   
+    animation: animate-card 2s linear infinite;
+    box-sizing: border-box;
+}
+#animated-border1:hover::before, #animated-border2:hover::before, #animated-border3:hover::before{
+    height: calc(100% + 24px);
+    width: calc(100% + 24px);
+}
+@keyframes animate-card{
+    50%{
+        filter: hue-rotate(350deg);
+    }
+}
+
+
+
+.card a{
+    background-color: var(--main-brand-color);
+    width: min-content;
+    padding: 15px 40px;
+    border-radius: 50px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: var(--text-color);
+    border: 4px solid var(--main-brand-color);
+    transition: 150ms ease-in-out;
+}
+.card a:hover{
+    background: transparent;
+}
+@media(max-width: 500px){
+    #services_section h2{
+        font-size: 12vw;
+    }
+}
