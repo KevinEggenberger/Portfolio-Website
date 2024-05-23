@@ -1,0 +1,15 @@
+/* styles.css */
+@import url('about_me.css');
+@import url('footer.css');
+@import url('general_settings.css');
+@import url('header.css');
+@import url('services.css');
+@import url('top_button.css');
+/* Füge hier weitere CSS-Dateien hinzu, falls nötig */
+
+/* Allgemeine Stile können hier auch definiert werden */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
